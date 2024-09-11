@@ -1,0 +1,373 @@
+header {
+    background-color: white;
+}
+
+
+.header-img {
+    width: 93%;
+}
+
+.header-img a i {
+    color: rgba(0, 0, 0, 0.381);
+    transition: all .3s;
+}
+
+.header-img a i:hover {
+    color: black;
+}
+
+
+.header-img img {
+    width: 3.7rem;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.ham-burger-sec span {
+    width: 100%;
+    height: 100%;
+    background-color: #059aabde;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    transition: all .3s;
+}
+
+.ham-burger-sec span:hover {
+    background-color: #ad0000de;
+}
+
+.search-box {
+    width: 60%;
+    position: relative;
+}
+
+.search-box button {
+    position: absolute;
+    border: none;
+    background: transparent;
+    top: 2.5%;
+    height: 100%;
+    color: rgba(0, 0, 0, 0.381);
+    font-size: 1.2vw;
+}
+
+.search-box input {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 3px;
+    padding-left: 1.7rem;
+
+}
+
+.search-box input::placeholder {
+    color: rgba(0, 0, 0, 0.381);
+    font-size: 1.2vw;
+    transition: all .3s;
+}
+
+.search-box input:focus::placeholder,
+.search-box button {
+    color: black;
+}
+
+.buttons {
+    width: 70%;
+}
+
+.buttons button {
+    background-color: #059aabde !important;
+    border: 1px solid #059aabde;
+    border-radius: 5px;
+    color: white;
+    padding: 4px;
+    transition: all .3s;
+    font-size: 1.3dvw;
+}
+
+.buttons button:hover {
+    background-color: black;
+}
+
+.dropdwun-btn img {
+    width: 2rem;
+}
+
+
+section {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+        'nav nav'
+        'sidebar main'
+        'sidebar footer';
+    min-height: 100vh;
+}
+
+header {
+    grid-area: nav;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: white;
+    height: 100vh;
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+
+main {
+    grid-area: main;
+    /* display: grid; */
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 750px 1fr;
+    column-gap: 20px;
+}
+
+.main-container a {
+    transition: all .3s;
+}
+
+.main-container a:hover {
+    color: black !important;
+}
+
+.box-1 {
+    /* background-color: rgba(255, 0, 0, 0.189); */
+    padding: 20px;
+}
+
+.box-2 {
+    /* background-color: aqua; */
+    padding: 20px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+
+aside ul li {
+    width: 100%;
+    height: 31px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 21px 6px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+aside ul li:hover {
+    background-color: rgba(255, 192, 203, 0.42);
+    color: #059aabde;
+}
+
+aside ul li span {
+    margin-right: 10px;
+}
+
+
+.wapper {
+    width: 12vw;
+    height: 30vh;
+    background-color: #c3c3c3;
+}
+
+.chlid-wapper {
+    width: 10vw;
+    height: 25vh;
+    background-color: #dbd9d9;
+}
+
+.chlid-wapper .image {
+    width: 4rem;
+    height: 4rem;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chlid-wapper img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+}
+
+.chlid-wapper sup {
+    font-size: 25px;
+    top: -4px;
+    color: #059aabde;
+}
+
+
+.newest-video {
+    width: 30rem;
+    height: 20rem;
+    background-color: white;
+    padding: 20px;
+}
+
+.newest-video video {
+    width: 100%;
+}
+
+
+.card-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 30px;
+}
+
+.card-container .card1,
+.card2,
+.card3,
+.card4 {
+    background-color: white;
+}
+
+.card-container span {
+    display: inline-flex;
+    background-color: rgba(255, 192, 203, 0.42);
+    width: 4.3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 11px;
+    border-radius: 5px;
+}
+
+.footer {
+    height: 30vh;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin-bottom: 20px;
+}
+
+footer a:hover {
+    color: white !important;
+}
+
+footer button {
+    width: 130px;
+    height: 40px;
+    background-color: #059aabde;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.socail-media {
+    width: 20%;
+}
+
+/* breakpoints */
+
+@media screen and (max-width:768px) {
+
+    .search-box input,
+    button,
+    .header-img a {
+        display: none;
+    }
+
+    .ham-burger-sec .col-1 {
+        width: 25%;
+    }
+
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        display: none;
+        transform: translateX(-100%);
+    }
+
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    .newest-video {
+        width: 20rem;
+    }
+
+    .wapper {
+        width: 17vw;
+    }
+
+    .chlid-wapper {
+        width: 14vw;
+    }
+
+}
+
+
+@media screen and (min-width:320px) and (max-width:425px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .newest-video {
+        width: 15rem;
+    }
+
+    .wapper {
+        width: 40vw;
+    }
+
+    .chlid-wapper {
+        width: 30vw;
+    }
+
+    .chlid-wapper p{
+        text-align: center;
+    }
+
+    .chlid-wapper .image {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .chlid-wapper img {
+        width: 2rem;
+        height: 2rem;
+        object-fit: cover;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) {
+    .main-container {
+        grid-template-columns: 500px 1fr;
+    }
+
+    .chlid-wapper .image {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .chlid-wapper img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .chlid-wapper p {
+        text-align: center;
+    }
+}
