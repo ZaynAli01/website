@@ -23,7 +23,7 @@
             <div class="row d-flex justify-content-between">
                 <div class="col-7 ham-burger-sec d-flex ps-0">
                     <div class="col-1">
-                        <span class="fs-3"><i class="fa-solid fa-bars"></i></span>
+                        <span class="fs-3" id="menu-icon"><i class="fa-solid fa-bars"></i></span>
                     </div>
                     <div class="col-6 header-img d-flex justify-content-between align-items-center">
                         <img src="clazz-logo.png" alt="">
@@ -45,7 +45,15 @@
                     </div>
 
                     <div class="dropdwun-btn border rounded-circle shadow-sm" role="button">
-                        <img src="clazz-logo.png" alt="">
+                        <div class="dropdown-start">
+                            <img src="clazz-logo.png" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                                aria-expanded="false" alt="">
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -53,11 +61,11 @@
     </header>
 
 
-    <section>
+    <section class="show">
 
-        <aside>
-            <ul class="list-unstyled">
-                <li>
+        <aside class="show" id="ham-burger-links">
+            <ul class="list-unstyled w-100">
+                <li class="active">
                     <span><i class="fa-solid fa-house"></i></span>
 
                     Home
@@ -105,7 +113,7 @@
         </aside>
 
 
-        <main>
+        <main class="show">
 
             <div class="main-container">
                 <div class="box-1">
@@ -147,8 +155,6 @@
                         </video>
                     </div>
 
-
-
                     <div class="card-container mt-5">
 
                         <div class="card1 text-center p-3">
@@ -175,19 +181,9 @@
                             <p>Explore a variety of fresh topics</p>
 
                         </div>
-
-
-
-
-
-
-
                     </div>
 
                 </div>
-
-
-
 
 
                 <div class="box-2">
@@ -211,22 +207,16 @@
                                 Facilis, repellendus cum ex distinctio voluptatum optio facere atque ut
                                 dicta.
                                 Error.</p>
-                            <a href="#" class="btn btn-primary">Start Teaching</a>
+                            <a href="#" class="btn card-btn text-light">Start Teaching</a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </main>
 
+        <footer class="bg-dark text-light show">
 
-
-
-
-
-
-
-        <footer class="bg-dark text-light">
-            
             <div class="row gx-0 m-5">
                 <div class="col-md-4 d-flex flex-column justify-content-center  text-start">
                     <a href="">Help</a>
@@ -241,7 +231,7 @@
                 </div>
 
                 <div class="col-md-4 d-flex flex-column justify-content-center  text-start">
-                    <button><a href="">Tech on Claaz</a></button>
+                    <button class="footer-btn"><a href="">Tech on Claaz</a></button>
                     <a href="">About</a>
                     <a href="">Contact</a>
                 </div>
@@ -249,14 +239,17 @@
 
             <hr>
 
-            <div class="d-flex justify-content-between align-items-center ps-5 pe-5">
-                <p>&copy;2024 <a href="" class="fw-bold">Claaz.Ik</a> All Rights Reserved.</p>
-                <div class="socail-media d-flex justify-content-between align-items-center">
+            <div class="row gx-0 d-flex justify-content-between align-items-center ps-5 pe-5">
+                <div class="col-6">
+                    <p>&copy;2024 <a href="" class="fw-bold">Claaz.Ik</a> All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 d-flex justify-content-between">
                     <a href=""><i class="fa-brands fa-facebook-f"></i></a>
                     <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href=""><i class="fa-brands fa-youtube"></i></a>
                     <a href=""><i class="fa-brands fa-instagram"></i></a>
                 </div>
+
             </div>
         </footer>
 
@@ -264,7 +257,11 @@
 
 
 
+    <script src="script.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 
 </body>
 
